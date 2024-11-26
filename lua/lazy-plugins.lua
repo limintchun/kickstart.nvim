@@ -12,8 +12,6 @@ require('lazy').setup({
 
 	require 'kickstart/plugins/lsp-config',
 
-	require 'kickstart/plugins/conform',
-
 	require 'kickstart/plugins/todo',
 
 	require 'kickstart/plugins/mini',
