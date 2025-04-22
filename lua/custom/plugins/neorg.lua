@@ -7,6 +7,7 @@ return {
       ["core.concealer"] = {}, -- Adds pretty icons to your documents
       ["core.todo-introspector"] = {},
       ["core.ui.calendar"] = {},
+      ["core.integrations.treesitter"] = {},
       ["core.dirman"] = { -- Manages Neorg workspaces
         config = {
           workspaces = {
