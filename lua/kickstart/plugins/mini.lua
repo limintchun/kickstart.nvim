@@ -28,7 +28,8 @@ local header_art =
 return { -- Collection of various small independent pluins/modules
   'echasnovski/mini.nvim',
   config = function()
-    -- require('mini.test').setup()
+   local statusline = require 'mini.statusline'
+            statusline.setup { use_icons = true } -- require('mini.test').setup()
     -- require('mini.basics').setup()
 
     -- Better Around/Inside textobjects
@@ -59,17 +60,17 @@ return { -- Collection of various small independent pluins/modules
     -- require('mini.notify').setup()
 
     -- mini.starter dashboard
-    local starter = require 'mini.starter'
-    starter.setup {
-      items = {
-        starter.sections.recent_files(3, true),
-      },
-      content_hooks = {
-        starter.gen_hook.adding_bullet(),
-        starter.gen_hook.aligning('center', 'center'),
-      },
-      header = header_art,
-    }
+    -- local starter = require 'mini.starter'
+    -- starter.setup {
+    --   items = {
+    --     starter.sections.recent_files(3, true),
+    --   },
+    --   content_hooks = {
+    --     starter.gen_hook.adding_bullet(),
+    --     starter.gen_hook.aligning('center', 'center'),
+    --   },
+    --   header = header_art,
+    -- }
     require('mini.hipatterns').setup {}
     require('mini.icons').setup {}
   end,

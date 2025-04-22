@@ -1,3 +1,4 @@
+local opt = vim.opt
 vim.opt.hlsearch = true
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
@@ -36,3 +37,16 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     vim.highlight.on_yank()
   end,
 })
+
+
+vim.keymap.set("n", "<leader>t", function()
+  require("neaterm").toggle()
+end,
+  {desc = "Open terminal"}
+)
+
+vim.keymap.set("n", "<leader>q", function()
+  require("neaterm").close()
+end,
+  {desc = "Close terminal"}
+)
