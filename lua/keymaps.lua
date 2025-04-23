@@ -50,3 +50,5 @@ vim.keymap.set("n", "<leader>q", function()
 end,
   {desc = "Close terminal"}
 )
+
+vim.keymap.set('n', 'gd', vim.lsp.buf.definition, { desc = 'Go to definition'})
