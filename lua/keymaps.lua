@@ -51,4 +51,7 @@ end,
   {desc = "Close terminal"}
 )
 
+vim.keymap.set("n", "<leader>d", function()
+  vim.diagnostic.open_float(0, { scope = "cursor", focusable = true, border = "rounded" })
+end, { desc = "Afficher les erreurs LSP" })
 vim.keymap.set('n', 'gd', vim.lsp.buf.definition, { desc = 'Go to definition'})
